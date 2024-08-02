@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>File Management System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--  -->
+    <div class="container">
+        <div class="file-structure">
+            <ul id="fileList">
+                <!-- Dynamic file structure will be rendered here -->  
+              <div class="directory-hierarchy">
+                  <ul id="directory-list"></ul>
+              </div>
+            </ul>
+        </div>
+        <div class="controls">
+            <button onclick="createItem('file')">New File</button>
+            <button onclick="createItem('directory')">New Directory</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

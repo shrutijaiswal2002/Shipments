@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.file-structure {
+    width: 70%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.file-structure ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-structure ul ul {
+    padding-left: 20px;
+}
+
+.file-structure li {
+    padding: 5px 0;
+}
+
+li.expanded > ul {
+    display: block;
+}
+
+li > ul {
+    display: none;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls button {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.directory-hierarchy {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.directory-hierarchy ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-hierarchy li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.directory-hierarchy li:last-child {
+    border-bottom: none;
+}
+
+.directory-hierarchy li.folder {
+    cursor: pointer;
+}
+
+.directory-hierarchy li.folder::before {
+    content: "\25B8"; /* Unicode character for a right-pointing triangle */
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.directory-hierarchy li.folder.expanded::before {
+    content: "\25BE"; /* Unicode character for a downward-pointing triangle */
+}
+
+.directory-hierarchy li.file {
+    padding-left: 20px;
+}
+
+.directory-hierarchy li.file::before {
+    content: "\1F4C4"; /* Unicode character for a file */
+    font-size: 12px;
+    margin-right: 10px;
+}
